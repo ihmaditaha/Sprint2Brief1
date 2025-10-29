@@ -56,7 +56,7 @@
         font-weight: 1000;
         font-size: 1.6em;
       }
-      .choices{
+      .choices {
         width: 100%;
       }
       .option {
@@ -75,6 +75,7 @@
         justify-content: space-between;
       }
       .prev-btn {
+        display: none;
         border-radius: 5px;
         padding: 5%;
         margin: 2% 0;
@@ -94,16 +95,16 @@
     <div class="quiz-container">
       <div class="quiz-title"><h1>Test Quiz</h1></div>
       <div class="progress-stats">
-        <div id="question-num" class="progress-count">1</div>
+        <div id="question-num" class="progress-count"></div>
         <progress id="progress-bar" value="10" max="100"></progress>
-        <div class="progress-score">0</div>
+        <div id="score" class="progress-score"></div>
       </div>
-      <div class="question">Lipsum</div>
+      <div id="questaff" class="question"></div>
       <div class="choices">
-        <button class="option">ANSWER 1</button>
-        <button class="option">ANSWER 2</button>
-        <button class="option">ANSWER 3</button>
-        <button class="option">ANSWER 4</button>
+        <button class="option" id="option1"></button>
+        <button class="option" id="option2"></button>
+        <button class="option" id="option3"></button>
+        <button class="option" id="option4"></button>
       </div>
       <div class="btn-pr-sui">
         <button class="prev-btn">precedant</button>
@@ -116,4 +117,89 @@
       crossorigin="anonymous"
     ></script> -->
   </body>
+  <script>
+    const questarr = [
+      {
+        question: "Who am I?",
+        option: ["Me", "You", "Yu", "Mi"],
+        corop: "You",
+      },
+      {
+        question: "Which of these planets is known for its prominent rings?",
+        option: ["Mars", "Venus", "Saturn", "Jupiter"],
+        corop: "Saturn",
+      },
+      {
+        question: "What is the chemical symbol for gold?",
+        option: ["Ag", "Fe", "Pb", "Au"],
+        corop: "Au",
+      },
+      {
+        question: "Who painted the Mona Lisa?",
+        option: [
+          "Vincent van Gogh",
+          "Pablo Picasso",
+          "Leonardo da Vinci",
+          "Claude Monet",
+        ],
+        corop: "Leonardo da Vinci",
+      },
+      {
+        question: "In which year did the Titanic sink?",
+        option: ["1905", "1912", "1923", "1931"],
+        corop: "1912",
+      },
+      {
+        question: "Which gas makes up the majority of Earth's atmosphere?",
+        option: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+        corop: "Nitrogen",
+      },
+      {
+        question: "What is the capital city of Australia?",
+        option: ["Sydney", "Melbourne", "Canberra", "Perth"],
+        corop: "Canberra",
+      },
+      {
+        question: "What is the hardest natural substance on Earth?",
+        option: ["Quartz", "Topaz", "Corundum", "Diamond"],
+        corop: "Diamond",
+      },
+      {
+        question:
+          "The novel *To Kill a Mockingbird* was written by which author?",
+        option: [
+          "J.K. Rowling",
+          "Harper Lee",
+          "Ernest Hemingway",
+          "F. Scott Fitzgerald",
+        ],
+        corop: "Harper Lee",
+      },
+      {
+        question: "How many sides does a heptagon have?",
+        option: ["6", "7", "8", "9"],
+        corop: "7",
+      },
+      {
+        question:
+          "What is the primary function of the red blood cells in the human body?",
+        option: [
+          "Fighting infection",
+          "Clotting blood",
+          "Carrying oxygen",
+          "Producing antibodies",
+        ],
+        corop: "Carrying oxygen",
+      },
+    ];
+    const sou2al = document.getElementById('questaff');
+    const ikhtiyarat = document.getElementsByClassName('option');
+    const questionNumber = document.getElementById('question-num');
+    const bar = document.getElementById('progress-bar');
+    const score = document.getElementById('score');
+    const suiv = document.getElementById('next-btn');
+    const prev = document.getElementById('prev-btn');
+    let counter=1;
+
+  </script>
 </html>
