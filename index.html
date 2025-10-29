@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    /> -->
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: aqua;
+        padding: 3%;
+      }
+      .quiz-container {
+        background-color: aliceblue;
+        width: 50vw;
+        height: 50vw;
+        justify-self: center;
+        justify-items: center;
+        padding: 2%;
+        border-radius: 15px;
+        box-shadow: 0 0 20px navy;
+        border: 1px solid black;
+      }
+      .quiz-title {
+        color: blueviolet;
+      }
+      .progress-stats {
+        border: 1px solid pink;
+        display: flex;
+        height: 10%;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2em;
+      }
+      progress {
+        position: relative;
+        text-align: center;
+      }
+      progress:after {
+        position: absolute;
+        content: attr(value) "%";
+        font-size: initial;
+        top: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="quiz-title"><h1>Test Quiz</h1></div>
+      <div class="progress-stats">
+        <div id="question-num" class="progress-count">1</div>
+        <progress id="progress-bar" value="10" max="100">10%</progress>
+        <div class="progress-score">0</div>
+      </div>
+      <div class="questions">Lipsum ldgbid rbfeyirbf ueryfber ubrfyur?</div>
+      <div class="choices">
+        <button class="option1">ANSWER 1</button>
+        <button class="option2">ANSWER 2</button>
+        <button class="option3">ANSWER 3</button>
+        <button class="option4">ANSWER 4</button>
+      </div>
+      <div class="btn">
+        <button class="prev-btn">precedant</button>
+        <button class="next-btn">suivant</button>
+      </div>
+    </div>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>
