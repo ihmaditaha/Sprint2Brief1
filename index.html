@@ -31,25 +31,32 @@
       }
       .quiz-title {
         color: blueviolet;
+        font-size: 26px;
       }
       .progress-stats {
-        border: 1px solid pink;
-        display: flex;
+        border-bottom: 1px solid pink;
+        display: grid;
+        grid-template-columns: 2fr 6fr 2fr;
         height: 10%;
         width: 100%;
         align-items: center;
         justify-content: space-between;
         font-size: 2em;
       }
+      .progress-count{
+        font-size: 100%;
+      }
       progress {
+        width: 100%;
         position: relative;
         text-align: center;
+        height: 50px;
       }
       progress:after {
         position: absolute;
         content: attr(value) "%";
         font-size: initial;
-        top: 25%;
+        top: 35%;
       }
       .question {
         padding: 5%;
@@ -92,7 +99,7 @@
     </style>
   </head>
   <body>
-    <div class="quiz-container">
+    <div id="quiz" class="quiz-container">
       <div class="quiz-title"><h1>Test Quiz</h1></div>
       <div class="progress-stats">
         <div id="question-num" class="progress-count"></div>
@@ -192,6 +199,7 @@
         corop: "Carrying oxygen",
       },
     ];
+    let quiz = document.getElementById("quiz");
     const sou2al = document.getElementById('questaff');
     const ikhtiyarat = document.getElementsByClassName('option');
     const questionNumber = document.getElementById('question-num');
@@ -199,7 +207,12 @@
     const score = document.getElementById('score');
     const suiv = document.getElementById('next-btn');
     const prev = document.getElementById('prev-btn');
-    let counter=1;
-
+    let counter=0;
+      if(counter==0){
+        sou2al.innerText=questarr[counter].question
+        for (let index = 0; index < 4; index++) {
+          ikhtiyarat[index].innerText=questarr[counter].option[index];
+        };
+      };
   </script>
 </html>
